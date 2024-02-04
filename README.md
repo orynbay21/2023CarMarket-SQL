@@ -8,11 +8,10 @@ Standardized the convention,Fixed Structural errors,Performed Type Conversions,R
   
 Created new variables,Aggregated data,Filtered observations
 - Data Exploration in SQL  (Done)
-
 Descriptive statistics analysis
 
 ## Detailed Description   
-### Data Cleaning
+### Data Cleaning and Wrangling
 
 ![1](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/e18c26ed-fe14-4be2-bf91-45365a7d245f)
 
@@ -75,3 +74,94 @@ Let's look at Car/Suv Column:
 
 ![12](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/322f1469-42ab-4595-9f9e-46207ee33936)
 The data stored seems to be vastly irrelevant to the column name, even though some of the records are duplicates with BodyType Records->Dropped the Column Car/Suv.
+
+### Data Exploration   
+
+Price Analysis:    
+
+1.Calculated the **standard deviation** of prices to understand the dispersion of prices in the dataset.    
+
+#### Discriptive statistics:
+
+2.What is the **median price** of car for each city?     
+
+![14](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/bf20ca2f-2283-4247-a99c-830aa82f480c)    
+
+**What is the difference beween percentile_cont and percentile_cont?**    
+
+When the number of records is even(for example,6) , there is no clear cut middle value, so percentile_cont will calculate the avg(3rd,4th) and display that as the median i.e., an interpolated value which is not present in the original dataset.In the same situation, percentile_disc is going to fetch a value within the table( in this example, 3rd value)    
+
+![15](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/b0523f9d-36e0-462c-80c5-48ad35a252fd)    
+
+3. What is the overall **median** price of the dataset? (Irrespective of the city)
+What is the **Mean** Price of the dataset?
+
+![16](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/d69dd876-521a-40f6-b3b2-af975ae936b2)    
+
+Are Mean Price and Median price different?   
+
+![17](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/e4f2e489-b66c-486a-b15b-b205c2c2ea5c)   
+
+**Why are Mean Price and Median Price so different?** 
+
+The Median is a better measure of the central tendency of the group as it is not skewed by exceptionally high or low characteristic values.    
+
+5. **Find Price Outliers by using IQR**
+
+![18](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/926b045e-65de-4dfa-81ba-a83d1adb8136)    
+
+As a result of that query I got 931 records of price outliers:    
+
+![19](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/ff8571da-cfd7-41b9-b6d6-13d47d26e4d2)    
+
+However **using the IQR method can find more "outliers" than using the standard deviation (or zscore)**. It depends on the distribution of the data. Data that's peaked with long tails will have a comparatively low IQR, so the IQR method will find lots of outliers.    
+
+
+7. **Find Price Outliers by using Zscore**
+
+![20](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/59bc0c37-57d8-4ab3-8e16-b687535d090b)   
+
+By using zscore we get way less outliers, 286 - to be specific:    
+
+![21](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/9d86789f-5943-4ede-b4a1-aeccf0d6f3bd)    
+
+
+9. Calculate **95 % confidence interval** for the price of cars
+
+![22](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/e30fe7dd-e47f-4da0-a092-d036255742b1)     
+
+With a 95 percent confidence interval, you have a 5 percent chance of being wrong:    
+
+![23](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/3a9cf361-cb27-4dbe-94e6-a5248eb34bf7)    
+
+11. Found Variability of Price column**(Found Min/Max value)**
+  
+13. Found TOP 10 car brands listed for sale in 2023 in Australia.
+
+![image](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/20d80179-2cb4-407d-9a09-b6fbdeba5f5b)   
+
+15. Found TOP 10 car Models.
+
+   Found that Toyota Hilux is the most frequently listed car in the dataset.  
+
+17. Calculated the percentage of the market overtaken by Toyota Hilux
+
+11.Since Toyota is the most popular brand. **What is the distribution** of its Models on the market?**What is the Mean price for each such Model?** 
+
+![image](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/0aecb7ff-bd29-4a0c-8740-417d8270c649)   
+
+19. Calculated what Percentege of cars on sale were New? What percentage were Used?
+    
+21. Calculated the  count and percentage presence of each fuel type in the dataset
+    
+![24](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/4bc5db22-1c74-4c04-89cf-bb747046a061)   
+
+23. What percentage of cars on the market have extremely high mileage?
+    
+![25](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/8ba0ee3f-29a0-4d0f-9c7e-ffd390cc76eb)   
+
+
+
+### Link to the original dataset   
+
+https://www.kaggle.com/datasets/nelgiriyewithana/australian-vehicle-prices
