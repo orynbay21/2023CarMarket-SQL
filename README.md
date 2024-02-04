@@ -3,12 +3,19 @@
 ## Short Description
 - Data Cleaning in SQL  (Done)
 
-Standardized the convention,Fixed Structural errors,Performed Type Conversions,Renamed Columns,Handled Missing Values,Dropped useless columns, Handled Duplications
+Standardized the convention, Fixed Structural errors, Performed Type Conversions, Renamed Columns, Handled Missing Values, Dropped useless columns, Handled Duplications
 - Data Wrangling in SQL  (Done)
-  
-Created new variables,Aggregated data,Filtered observations
+
+Created new variables, Aggregated data, Filtered observations
+
 - Data Exploration in SQL  (Done)
-Descriptive statistics analysis
+
+Performed Descriptive analysis( Found Mean, Median, Mode, Variability(Min/Max values), Distribution.
+
+Used Window Functions, Aggregate functions, CTE's, subqueries, filtering, sorting, mathematical operations, statistical functions, row limiting.   
+
+Found price outliers using IQR, found price outliers using Zscore, Calculated a 95% confidence interval, etc.   
+
 
 ## Detailed Description   
 ### Data Cleaning and Wrangling
