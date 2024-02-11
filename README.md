@@ -1,5 +1,8 @@
 # 2023CarMarket-SQL
-**SQL** : Cleaning, Wrangling and Exploring the Data
+**SQL** : Cleaning, Wrangling and Exploring the Data    
+
+   
+**Excel**: Created an Interactive Dynamic Dashboard with Slicers using Pivot Tables and Pivot Diagrams
 ## Short Description
 - Data Cleaning in SQL  (Done)
 
@@ -16,6 +19,10 @@ Used Window Functions, Aggregate functions, CTE's, subqueries, filtering, sortin
 
 Found price outliers using IQR, found price outliers using Zscore, Calculated a 95% confidence interval, etc.   
 
+- Interactive Dashboard in Excel  (Done)
+Slicers for search by: City, State,UsedOrNew,Year of Manufacture, Body Type, Drive Type, Transmission, Number of Seats
+Summary Statistics: Number of Cars, Minimum Year of Manufacture, Max Year, Avg Kilometres, Avg Fuel Consumption,Avg. Engine Capacity,Avg. Price,Min Price, Max Price
+Diagrams for: Top 10 most popular brands and their average vehicle price, Fuel Type Segment Overview, Vehicle Distribution based of year of manufacture, Correlation analysis ,Fuel Consumption by Fuel type.
 
 ## Detailed Description   
 ### Data Cleaning and Wrangling
@@ -167,6 +174,17 @@ With a 95 percent confidence interval, you have a 5 percent chance of being wron
     
 ![25](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/8ba0ee3f-29a0-4d0f-9c7e-ffd390cc76eb)   
 
+    
+### Dynamic Interactive Dashboard in Excel
+
+Examples of Pivot tables Created:   
+
+    
+![pivotTables](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/8652e0a4-3ccc-413b-a3d1-1e387af19ced)
+
+Overview of the Dashboard:    
+
+![ExcelDashboard](https://github.com/orynbay21/2023CarMarket-SQL/assets/98757036/a7406581-c41f-4e09-9bb3-2f094bfb78bf)
 
 
 ### Link to the original dataset   
