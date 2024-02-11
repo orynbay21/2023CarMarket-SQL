@@ -20,9 +20,14 @@ Used Window Functions, Aggregate functions, CTE's, subqueries, filtering, sortin
 Found price outliers using IQR, found price outliers using Zscore, Calculated a 95% confidence interval, etc.   
 
 - Interactive Dashboard in Excel  (Done)
-Slicers for search by: City, State,UsedOrNew,Year of Manufacture, Body Type, Drive Type, Transmission, Number of Seats
-Summary Statistics: Number of Cars, Minimum Year of Manufacture, Max Year, Avg Kilometres, Avg Fuel Consumption,Avg. Engine Capacity,Avg. Price,Min Price, Max Price
-Diagrams for: Top 10 most popular brands and their average vehicle price, Fuel Type Segment Overview, Vehicle Distribution based of year of manufacture, Correlation analysis ,Fuel Consumption by Fuel type.
+
+    
+Slicers for search by: City, State,UsedOrNew,Year of Manufacture, Body Type, Drive Type, Transmission, Number of Seats   
+
+Summary Statistics: Number of Cars, Minimum Year of Manufacture, Max Year, Avg Kilometres, Avg Fuel Consumption,Avg. Engine Capacity,Avg. Price,Min Price, Max Price   
+
+Diagrams for: Top 10 most popular brands and their average vehicle price, Fuel Type Segment Overview, Vehicle Distribution based of year of manufacture, Correlation analysis ,Fuel Consumption by Fuel type.   
+
 
 ## Detailed Description   
 ### Data Cleaning and Wrangling
